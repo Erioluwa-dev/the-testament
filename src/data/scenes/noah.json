@@ -1,0 +1,36 @@
+{
+  "id": "noah",
+  "title": "The Flood",
+  "music": "noah-gather",
+  "map": "noah-plain",
+  "intro": ["Genesis 6:5", "Genesis 6:8"],
+  "triggers": [
+    {
+      "id": "family",
+      "npc": "noah",
+      "verses": ["Genesis 6:13-14"],
+      "once": true
+    },
+    {
+      "id": "ark-ramp",
+      "zone": { "x": 560, "y": 360, "width": 160, "height": 120 },
+      "verses": ["Genesis 7:1"],
+      "once": true
+    }
+  ],
+  "interaction": {
+    "type": "gatherPairs",
+    "pairs": ["lion", "elephant", "sheep", "camel", "dove", "giraffe"],
+    "target": "ark-ramp"
+  },
+  "witness": {
+    "verses": ["Genesis 9:13"],
+    "effect": "rainbow",
+    "music": "noah-resolve"
+  },
+  "scrollPage": {
+    "id": "page-noah",
+    "verse": "Genesis 9:13",
+    "image": "page-noah"
+  }
+}

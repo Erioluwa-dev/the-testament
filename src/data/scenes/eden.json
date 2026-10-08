@@ -1,0 +1,54 @@
+{
+  "id": "eden",
+  "title": "Eden",
+  "music": "eden",
+  "map": "eden",
+  "intro": ["Genesis 2:8", "Genesis 2:9"],
+  "triggers": [
+    {
+      "id": "river",
+      "zone": { "x": 80, "y": 260, "width": 220, "height": 90 },
+      "verses": ["Genesis 2:10-14"],
+      "once": true
+    },
+    {
+      "id": "grove",
+      "zone": { "x": 420, "y": 180, "width": 200, "height": 120 },
+      "verses": ["Genesis 2:15"],
+      "once": true
+    },
+    {
+      "id": "animals",
+      "zone": { "x": 680, "y": 380, "width": 220, "height": 120 },
+      "verses": ["Genesis 2:19-20"],
+      "once": true
+    },
+    {
+      "id": "tree",
+      "zone": { "x": 560, "y": 120, "width": 160, "height": 160 },
+      "verses": ["Genesis 2:16-17"],
+      "once": true
+    }
+  ],
+  "interaction": {
+    "type": "followPath",
+    "waypoints": [
+      { "id": "gate", "x": 0.12, "y": 0.55, "verses": ["Genesis 2:8"] },
+      { "id": "river", "x": 0.3, "y": 0.62, "verses": ["Genesis 2:10-14"] },
+      { "id": "grove", "x": 0.5, "y": 0.45, "verses": ["Genesis 2:15"] },
+      { "id": "animals", "x": 0.66, "y": 0.6, "verses": ["Genesis 2:19-20"] },
+      { "id": "tree", "x": 0.5, "y": 0.32, "verses": ["Genesis 2:9"] }
+    ],
+    "tree": { "x": 0.5, "y": 0.32 }
+  },
+  "witness": {
+    "verses": ["Genesis 2:16-17", "Genesis 3:23-24"],
+    "effect": "expulsion",
+    "music": "eden-witness"
+  },
+  "scrollPage": {
+    "id": "page-eden",
+    "verse": "Genesis 2:9",
+    "image": "page-eden"
+  }
+}

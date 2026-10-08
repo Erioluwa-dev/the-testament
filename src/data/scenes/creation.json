@@ -1,0 +1,39 @@
+{
+  "id": "creation",
+  "title": "Creation",
+  "music": "creation",
+  "intro": ["Genesis 1:1", "Genesis 1:2"],
+  "triggers": [],
+  "interaction": {
+    "type": "speakDays",
+    "days": [
+      { "id": "day1", "verses": ["Genesis 1:3-5"], "effect": "light" },
+      { "id": "day2", "verses": ["Genesis 1:6-8"], "effect": "firmament" },
+      { "id": "day3", "verses": ["Genesis 1:9-13"], "effect": "land" },
+      { "id": "day4", "verses": ["Genesis 1:14-19"], "effect": "lights" },
+      { "id": "day5", "verses": ["Genesis 1:20-23"], "effect": "creatures" },
+      {
+        "id": "day6",
+        "verses": ["Genesis 1:24-25", "Genesis 1:26-27", "Genesis 1:28-31"],
+        "effect": "mankind"
+      },
+      {
+        "id": "day7",
+        "verses": ["Genesis 2:1-3"],
+        "effect": "rest",
+        "withheld": true,
+        "waitMs": 7000
+      }
+    ]
+  },
+  "witness": {
+    "verses": ["Genesis 2:3"],
+    "effect": "glow",
+    "music": "creation-witness"
+  },
+  "scrollPage": {
+    "id": "page-creation",
+    "verse": "Genesis 1:31",
+    "image": "page-creation"
+  }
+}
