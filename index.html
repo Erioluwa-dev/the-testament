@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="Witness: walk through Genesis 1-11 as an unseen traveler of scripture."
+    />
+    <title>Witness: Genesis 1-11</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #0b0d12;
+        /* Single-finger taps must reach Phaser, not pan the page (plan §6 mobile). */
+        touch-action: none;
+      }
+
+      #game {
+        position: absolute;
+        inset: 0;
+      }
+
+      #game canvas {
+        display: block;
+        image-rendering: pixelated;
+      }
+
+      /*
+       * Landscape only (plan D5). The overlay is advisory: pointer-events stays
+       * "none" so a player who is mid-rotation — and the portrait-viewport smoke
+       * test — can still tap through to the letterboxed game instead of being
+       * hard-blocked by a full-screen div.
+       */
+      #rotate-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 0;
+        color: #e8dcc0;
+        background: rgba(11, 13, 18, 0.85);
+        font-family: 'Pixelify Sans', 'Courier New', monospace;
+        font-size: 20px;
+        line-height: 1.4;
+        text-align: center;
+        pointer-events: none;
+      }
+
+      #rotate-overlay .icon {
+        font-size: 42px;
+      }
+
+      #rotate-overlay p {
+        margin: 0 24px;
+      }
+
+      @media (orientation: portrait) {
+        #rotate-overlay {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <div id="rotate-overlay" role="status" aria-live="polite">
+      <span class="icon" aria-hidden="true">&#10227;</span>
+      <p>Rotate your device to play in landscape.</p>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
